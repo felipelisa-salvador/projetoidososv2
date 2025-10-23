@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apadrinhe um Idoso - FUMPRES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="fumpres-highlight">Fundo Municipal de Previdência do Servidor de Salvador (FUMPRES)</span>
+            
+            <h1>De Coração para Coração</h1>
+            <p class="description">Projeto de apadrinhamento de idosos. Escolha o idoso que deseja presentear. Cada idoso pode ser escolhido no máximo 2 vezes. Cadastre-se para confirmar.</p>
+        </header>
+
+        <form id="selectionForm">
+
+            <h2 class="section-title">Lista de Idosos Disponíveis</h2>
+            
+            <div id="idosos-list" class="idosos-grid">
+                <p id="loading-message">Carregando lista...</p>
+            </div>
+            
+            <h2 class="section-title">Seus Dados (Doador)</h2>
+            <div class="donor-fields">
+                <div class="input-group">
+                    <label for="nome_doador">Seu Nome:</label>
+                    <input type="text" id="nome_doador" name="nome_doador" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="cpf_doador">CPF:</label>
+                    <input type="text" id="cpf_doador" name="cpf_doador" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email_doador">E-mail:</label>
+                    <input type="email" id="email_doador" name="email_doador" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="celular_doador">Celular:</label>
+                    <input type="tel" id="celular_doador" name="celular_doador">
+                </div>
+            </div>
+
+            <button type="submit" id="submit-button">Confirmar Escolhas</button>
+            <p id="feedback-message" class="message hidden"></p>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
