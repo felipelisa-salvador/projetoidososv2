@@ -1,0 +1,45 @@
+/* =========================================================================
+   FUNDO INSTITUCIONAL
+   ========================================================================= */
+
+body {
+    /* ... (código existente do body) ... */
+
+    background-image: url('fundo-coracao.png'); /* Caminho para sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área, cortando se necessário */
+    background-position: center center; /* Centraliza a imagem no fundo */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+
+    /* Adicione um overlay para melhorar a legibilidade do texto se a imagem for muito vibrante */
+    /* Remove o background-color: var(--background-light); existente do body para ver a imagem */
+    background-color: rgba(241, 241, 241, 0.85); /* Camada translúcida sobre a imagem */
+    background-blend-mode: overlay; /* Mistura a cor de fundo com a imagem */
+}
+
+/* O container deve ter seu próprio background branco para o conteúdo */
+.container {
+    background-color: var(--card-background); /* Continua branco */
+    /* ... (outras propriedades do container) ... */
+}
+
+/* Opcional: Ajustar a sombra do container para se destacar mais do fundo */
+.container {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* Opcional: Se o texto no topo ainda estiver difícil de ler, você pode escurecer o header */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para o cabeçalho */
+    padding: 30px 40px 15px; /* Ajuste o padding se necessário */
+    margin: -30px -40px 30px; /* Expande o background para cobrir as margens do container */
+    border-radius: 8px 8px 0 0; /* Arredonda apenas os cantos superiores */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Pequena sombra para destacá-lo */
+    position: relative; /* Para que o z-index funcione se precisar */
+    z-index: 10;
+}
+
+/* Ajuste o padding do container para compensar o margin negativo do header */
+.container {
+    padding-top: 0; /* Remove o padding-top original, pois o header o cobre */
+}
